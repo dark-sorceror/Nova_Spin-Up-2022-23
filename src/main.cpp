@@ -5,6 +5,8 @@
 #include <math.h>
 
 void initialize() {
+	printf("initialize");
+
 	lmtrs.set_brake_modes(E_MOTOR_BRAKE_COAST);
 	rmtrs.set_brake_modes(E_MOTOR_BRAKE_COAST);
 	rm.set_brake_mode(E_MOTOR_BRAKE_COAST);
@@ -29,7 +31,7 @@ void autonomous() {
 }
 
 void opcontrol() {
-	lcd::print(0, "%d | %d", (name), (team));
+	lcd::print(0, "%s | %s", (name), (team));
 
 	while (true) {
 		int x = ctr.get_analog(ANALOG_RIGHT_X);
@@ -46,10 +48,9 @@ void opcontrol() {
 
 		//pros::Task::create()
 		if (ctr.get_digital(E_CONTROLLER_DIGITAL_LEFT)) toggle_rm();
-		if (ctr.get_digital(E_CONTROLLER_DIGITAL_A)) toggle_im();
+		if (ctr.get_digital(E_CONTROLLER_DIGITAL_L1)) toggle_im();
 		if (ctr.get_digital(E_CONTROLLER_DIGITAL_X)) toggle_fm();
 
-		// awesome time calculation wow ommg
 		lcd::print(2, "Time Elapsed: %d:%d", (((count / 50) % 3600) / 60), ((count / 50) % 60));
 
 		//testing

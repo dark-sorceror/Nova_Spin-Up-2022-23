@@ -27,10 +27,14 @@ void auton() {
                 Logger::LogLevel::debug
             )
         )
-        .withOdometry()
-        .buildOdometry();
+        .build();
 
     toggle_im();
-    chassis->driveToPoint({ 1_ft, 1_ft} );
-    chassis->driveToPoint({ -1_ft, -1_ft });
+    chassis -> moveDistance(-0.1_m);
+    chassis -> turnToAngle(90_deg);
+    chassis -> moveDistance(0.1_m);
+    toggle_im();
+    toggle_rm();
+    sleep(5);
+    toggle_rm();
 }

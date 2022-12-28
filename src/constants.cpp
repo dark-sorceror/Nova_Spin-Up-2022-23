@@ -32,11 +32,6 @@ void toggle_rm() {
     rm = 127; if (!rm_on); else rm = 0;
 } 
 
-void toggle_im() { 
-    im_on = !im_on;
-    im = -127; if (!im_on); else im = 0; 
-}
-
 void toggle_fm() {
     fly_on = !fly_on;
     if (!fly_on) {
@@ -46,4 +41,10 @@ void toggle_fm() {
         fm = 0;
         
     }
+}
+
+//test
+void toggle_im() {
+    im_on = !im_on;
+    im.move_velocity(-127); if (!im_on); else im.brake();
 }
