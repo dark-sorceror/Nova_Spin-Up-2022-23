@@ -16,18 +16,21 @@
 #define PROS_USE_LITERALS
 
 #include "api.h"
+#include <iostream>
+#include <string>
 
 extern pros::Controller ctr;
 extern pros::Motor_Group lmtrs;
 extern pros::Motor_Group rmtrs;
 extern pros::Motor im;
 extern pros::Motor rm;
+extern pros::Motor fm;
+extern pros::Motor ixm;
+
+extern const std::string NAME;
+extern const std::string TEAM;
 
 using namespace pros;
-
-#include "okapi/api.hpp"
-
-using namespace okapi;
 
 #ifdef __cplusplus
 
