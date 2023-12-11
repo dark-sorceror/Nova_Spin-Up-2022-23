@@ -13,7 +13,7 @@
 #include "api.h"
 #include "okapi/api.hpp"
 
-void auton();
+void auton_red_close();
 
 #endif
 

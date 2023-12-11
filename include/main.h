@@ -16,16 +16,18 @@
 #define PROS_USE_LITERALS
 
 #include "api.h"
+#include "okapi/api.hpp"
 #include <iostream>
 #include <string>
 
 extern pros::Controller ctr;
-extern pros::Motor_Group lmtrs;
-extern pros::Motor_Group rmtrs;
-extern pros::Motor im;
-extern pros::Motor rm;
-extern pros::Motor fm;
-extern pros::Motor ixm;
+extern pros::Motor_Group leftDrive;
+extern pros::Motor_Group rightDrive;
+extern pros::IMU imu;
+extern pros::Motor arm;
+extern pros::Motor flywheel;
+extern pros::ADIDigitalOut piston_1;
+extern pros::ADIDigitalOut piston_2;
 
 extern const std::string NAME;
 extern const std::string TEAM;
