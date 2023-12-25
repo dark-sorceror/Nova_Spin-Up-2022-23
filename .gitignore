@@ -15,3 +15,16 @@ temp.log
 temp.errors
 *.ini
 .d/
+
+include/display/
+include/okapi/
+include/pros/
+firmware/
+.gitattributes
+.gitignore
+client.log
+common.mk
+LICENSE
+Makefile
+project.PROS
+

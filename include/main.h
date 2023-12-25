@@ -7,6 +7,9 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ * Updated - 12/24/2023
+ * Last Successful Test - /
  */
 
 #ifndef _PROS_MAIN_H_
@@ -16,21 +19,12 @@
 #define PROS_USE_LITERALS
 
 #include "api.h"
-#include "okapi/api.hpp"
-#include <iostream>
-#include <string>
 
-extern pros::Controller ctr;
-extern pros::Motor_Group leftDrive;
-extern pros::Motor_Group rightDrive;
-extern pros::IMU imu;
-extern pros::Motor arm;
-extern pros::Motor flywheel;
-extern pros::ADIDigitalOut piston_1;
-extern pros::ADIDigitalOut piston_2;
-
-extern const std::string NAME;
-extern const std::string TEAM;
+#include "globals.h"
+#include "/components/drive.h"
+#include "/components/flywheel.h"
+#include "/components/arm.h"
+#include "/components/wings.h"
 
 using namespace pros;
 
@@ -49,6 +43,10 @@ extern "C" {
 #endif
 
 #ifdef __cplusplus
-#endif
+
+#include <iostream>
+#include <string>
 
 #endif
+
+#endif // _PROS_MAIN_H_

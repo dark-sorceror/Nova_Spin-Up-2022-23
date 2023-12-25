@@ -13,7 +13,9 @@
 #include "api.h"
 #include "okapi/api.hpp"
 
-void auton_red_close();
+void autonClose();
+void autonFar();
+void autonSkills();
 
 #endif
 
